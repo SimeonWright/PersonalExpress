@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>21 Savage Fans</title>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="font-awesome.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Dont mind me, just trying to hack your page</h1>
+  
+
+
+  <div class="col-sm-6">
+    <h3>Keep looking here.</h3>
+    <ul class="messages">
+    <% for(var i=0; i<messages.length; i++) {%>
+      <li class="message">
+        <span><%= messages[i].name %></span>
+        <span><%= messages[i].msg %></span>
+        <span class="hidden"><%= messages[i].thumbUp %></span>
+        <span class="hidden"><%= messages[i].thumbDown %></span>
+        <span><%= messages[i].thumbUp  - messages[i].thumbDown %> </span>
+        <span><i class="fa fa-thumbs-up" aria-hidden="true"></i></span>
+        <span><i class="fa fa-thumbs-down" aria-hidden="true"></i></span>
+        <span><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+        <!-- <button class="update-button">Replace quote</button> -->
+      </li>
+    <% } %>
+    </ul>
+
+    <div>
+      <h2>The Haker Invades!</h2>
+      <p>
+        If you click the button below, and refresh the page you will see my magic
+      </p>
+      <button class="update-button">HACK</button>
+    </div>
+
+  <form action="/messages" method="POST">
+    <input type="text" placeholder="author" name="name">
+    <input type="text" placeholder="quote" name="msg">
+    <button type="submit">Submit</button>
+  </form>
+
+  <script src="main.js"></script>
+
+</body>
+</html>

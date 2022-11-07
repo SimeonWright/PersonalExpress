@@ -1,0 +1,14 @@
+body{
+  /* background: rgb(83, 74, 74); */
+  background-image: url("hack.gif");
+  color: white;
+}
+h3{
+  margin-top: 40px;
+}
+
+.hidden{
+  visibility: hidden;
+}
+
+
